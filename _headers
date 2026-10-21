@@ -1,0 +1,10 @@
+# Security headers for Netlify and Cloudflare Pages (Vercel uses vercel.json).
+# The script hash allows only the small reduced-motion script in <head>; if that
+# script changes, update the hash (the README explains how).
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-iI6XoNLsHCV0+JWkyN3znfSGuR5njF2PJUWG1SzRlFc='; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
